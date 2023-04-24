@@ -1,10 +1,4 @@
-This is being created as part of the project :)
+= TEAM 7550 =
 
-I love doing git commits !!!!!
-
-List of things to do
-* add programming file
-* figure out what the actual project is
-* plan here
-* delete irrelevant parts
-* do work
+Mission:
+You know what to do
