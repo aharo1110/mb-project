@@ -8,6 +8,27 @@
     <body>
         <div class="container">
             
+            <h2 class="text-center mt-5 mb-5">{{ d }} in History</h2>
+            <div class="card-deck d-flex justify-content-center">
+                <div class="card mb-5 justify-content-center" style="max-width:70%;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{ data["events"][m]["year"] }} </h5>
+                                <p class="card-text"> {{ data["events"][m]["text"] }}</p>
+                                <h6 class="card-title text-muted">More info:</h6>
+                                {% for i in range(data["events"][m]["pages"]|length) %}
+                                    <a href='{{ data["events"][m]["pages"][i]["content_urls"]["desktop"]["page"] }}' target='_blank' class="btn btn-primary mb-1">{{ data["events"][m]["pages"][i]["normalizedtitle"] }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded-end" style="width:auto;" src='{% if data["events"][m]["pages"][0]["originalimage"] is defined %}{{ data["events"][m]["pages"][0]["originalimage"]["source"] }}{% endif %}'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text-center mt-5 mb-5 text-muted">{{ m + 1 }} of {{ data["events"]|length }}</h2>
         </div>
     </body>
 </html>
