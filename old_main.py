@@ -1,3 +1,4 @@
+# Old version of main file kept for posterity
 import requests, json
 from flask import Flask, render_template, redirect
 from flask_bootstrap import Bootstrap5
